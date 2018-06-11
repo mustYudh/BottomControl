@@ -6,12 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.denghao.bottomcontrol.MainActivity"
     >
 
-  <com.denghao.control.BottomNavigationControl
-      android:id="@+id/BottomNavigationControl"
+
+  <FrameLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      >
+  </FrameLayout>
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:id="@+id/tab_control"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:background="#65a753"
       />
 </LinearLayout>
+
