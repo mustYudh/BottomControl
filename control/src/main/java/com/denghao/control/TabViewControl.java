@@ -1,7 +1,7 @@
 package com.denghao.control;
 
-import android.app.Activity;
 import android.view.View;
+import android.widget.FrameLayout;
 
 /**
  * @author yudneghao
@@ -9,15 +9,41 @@ import android.view.View;
  */
 
 public interface TabViewControl {
-  /**
-   * 初始化View
-   * @param activity
-   */
-  void init(Activity activity);
-  /**
-   * 添加TabVie
-   *
-   * @param view TabView
-   */
-  void addView(View view);
+    /**
+     * 获取填充页
+     * @return 填充页
+     */
+    FrameLayout getContentView();
+
+    /**
+     * 添加TabVie
+     *
+     * @param view TabView
+     */
+    void addViewTabView(View view);
+
+    /**
+     * 移除所有的TabView
+     */
+    void removeAllTabView();
+
+    /**
+     * 获取当前选中的TabView的索引
+     *
+     * @return
+     */
+    int getCurrentPosition(int currentPosition);
+
+    /**
+     * 获取当前的Tab数量
+     *
+     * @return 当前Tab数量
+     */
+    int getTabCount();
+
+    void setOnTabClickListener(TabClickListener onTabClickListener);
+
+     interface TabClickListener {
+        void onTabClickListener(int position,View view);
+    }
 }

@@ -10,6 +10,5 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     BottomNavigationControl control = (BottomNavigationControl) findViewById(R.id.BottomNavigationControl);
-    control.setHeight(100);
   }
 }
