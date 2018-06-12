@@ -39,16 +39,19 @@ public class BottomNavigationView extends LinearLayout {
     mControl = (BottomNavigationControl) findViewById(R.id.bottom_navigation_control);
   }
 
+
   public BottomNavigationView initControl(FragmentActivity activity) {
     mController = new TabController(activity, mControl);
     mController.clearAllTab();
     return this;
   }
 
-  public void setPagerView(List<TabItem> items, int normalSelect) {
+  public void
+  setPagerView(List<TabItem> items, int normalSelect) {
     mController.addItem(items);
     mController.selectFragment(normalSelect, null);
   }
+
 
   public BottomNavigationControl getNavgation() {
     return mControl;

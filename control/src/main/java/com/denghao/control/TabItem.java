@@ -16,7 +16,5 @@ public interface TabItem {
 
   String getTag();
 
-  void setTitleName();
-
   void setMessageHint(int count);
 }

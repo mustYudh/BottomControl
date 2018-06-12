@@ -12,7 +12,10 @@ public class TabView implements TabItem {
   private View mView;
   private Fragment mFragment;
 
-
+  /**
+   * @param view 对应Fragment底部道航栏的View
+   * @param fragment 当前导航栏对应的Fragment
+   */
   public TabView(View view, Fragment fragment) {
     mView = view;
     mFragment = fragment;
@@ -31,9 +34,6 @@ public class TabView implements TabItem {
     return mFragment.getClass().getSimpleName();
   }
 
-  @Override public void setTitleName() {
-
-  }
 
   @Override public void setMessageHint(int count) {
 
