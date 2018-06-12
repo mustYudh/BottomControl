@@ -2,6 +2,23 @@
 通用的底部切换Fragment的壳子
 
 
+- 添加依赖
+ ````
+ 	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
+		dependencies {
+	        implementation 'com.github.mustYudh:BottomControl:1.0.0'
+	}
+ 
+ ````
+ 
+
+
 ### BottomNavigationView使用
  
  - 把BottomNavigationView添加到Activity布局中
