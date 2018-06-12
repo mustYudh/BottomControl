@@ -30,12 +30,12 @@ public class BottomNavigationControl extends LinearLayout implements TabViewCont
     public BottomNavigationControl(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         View.inflate(context, R.layout.bottom_navigation_control_view, this);
+        tabControlView = (LinearLayout) findViewById(R.id.tab_control);
+        frameLayout = (FrameLayout) findViewById(R.id.content_view);
     }
 
 
     public void setTabControlHeight(int height) {
-        tabControlView = (LinearLayout) findViewById(R.id.tab_control);
-        frameLayout = (FrameLayout) findViewById(R.id.content_view);
         LinearLayout.LayoutParams params =
                 new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         params.height = dp2PX(height);

@@ -8,7 +8,7 @@ import android.view.View;
  * @date 2018/6/12
  */
 
-interface TabItem {
+public interface TabItem {
 
   Fragment getCurrentFragment();
 
@@ -16,7 +16,7 @@ interface TabItem {
 
   String getTag();
 
-  void setTitleName(String name);
+  void setTitleName();
 
   void setMessageHint(int count);
 }

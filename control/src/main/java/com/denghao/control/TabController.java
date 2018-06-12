@@ -28,6 +28,7 @@ public class TabController {
     this.fragmentActivity = fragmentActivity;
     tabViewControl.setOnTabClickListener(new TabViewControl.TabClickListener() {
       @Override public void onTabClickListener(int position, View view) {
+        selectFragment(position, null);
         if (tabClickListener != null) {
           tabClickListener.onTabClickListener(position, view);
         }
@@ -53,8 +54,6 @@ public class TabController {
     return currentPosition >= 0 && currentPosition < mBeans.size() ? mBeans.get(currentPosition).tag
         : "";
   }
-
-
 
   /**
    * 华为设置权限后会重新执行onCreate ,但是FragmentManager的页面不销毁，这边直接先全部销毁
