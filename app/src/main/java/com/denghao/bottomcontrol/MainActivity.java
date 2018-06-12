@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import com.denghao.control.TabItem;
 import com.denghao.control.TabView;
+import com.denghao.control.TabViewControl;
 import com.denghao.control.view.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    BottomNavigationView navigationControl =
-        (BottomNavigationView) findViewById(R.id.BottomNavigationControl);
+    BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_view);
     List<TabItem> items = new ArrayList<TabItem>();
     TestFragment fragment1 = new TestFragment();
     TestFragment2 fragment2 = new TestFragment2();
@@ -27,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
     items.add(new TabView(getView("2"), fragment2));
     items.add(new TabView(getView("3"), fragment3));
     items.add(new TabView(getView("4"), fragment4));
-    navigationControl.initControl(this).setPagerView(items, 0);
+    navigationView.initControl(this).setPagerView(items, 0);
+    navigationView.getNavgation().setTabControlHeight(60);
+    navigationView.getControl().setOnTabClickListener(new TabViewControl.TabClickListener() {
+      @Override public void onTabClickListener(int position, View view) {
+
+      }
+    });
   }
 
   @NonNull private View getView(String text) {

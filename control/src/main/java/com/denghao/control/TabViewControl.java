@@ -41,6 +41,9 @@ public interface TabViewControl {
      */
     int getTabCount();
 
+
+    View getOtherView(View view);
+
     void setOnTabClickListener(TabClickListener onTabClickListener);
 
      interface TabClickListener {
