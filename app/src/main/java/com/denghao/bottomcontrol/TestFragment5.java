@@ -17,12 +17,11 @@ import com.denghao.control.view.utils.UpdataCurrentFragment;
  * @date 2018/6/12
  */
 
-
-public class TestFragment extends Fragment implements UpdataCurrentFragment  {
+public class TestFragment5 extends Fragment  implements UpdataCurrentFragment {
   @Nullable @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-    View view = View.inflate(getActivity(), R.layout.test_fragment, null);
+    View view = View.inflate(getActivity(), R.layout.test_fragment2, null);
     return view;
   }
 
@@ -35,8 +34,7 @@ public class TestFragment extends Fragment implements UpdataCurrentFragment  {
 
   @Override
   public void update(Bundle bundle) {
-    Toast.makeText(getActivity(),   "点击1", Toast.LENGTH_SHORT).show();
-    Log.e("======>", "update:1 ");
-
+    Toast.makeText(getActivity(),   "点击5", Toast.LENGTH_SHORT).show();
+    Log.e("======>", "update: 5");
   }
 }

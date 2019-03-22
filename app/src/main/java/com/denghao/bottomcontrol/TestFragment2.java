@@ -33,7 +33,7 @@ public class TestFragment2 extends Fragment implements UpdataCurrentFragment  {
 
   @Override
   public void update(Bundle bundle) {
-    Toast.makeText(getActivity(),   "点击", Toast.LENGTH_SHORT).show();
-    Log.e("======>", "update: ");
+    Toast.makeText(getActivity(),   "点击2", Toast.LENGTH_SHORT).show();
+    Log.e("======>", "update: 2");
   }
 }
