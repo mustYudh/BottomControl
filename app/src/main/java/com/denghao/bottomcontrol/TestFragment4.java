@@ -13,11 +13,11 @@ import android.view.ViewGroup;
  * @date 2018/6/12
  */
 
-public class TestFragment extends Fragment  {
+public class TestFragment4 extends Fragment {
   @Nullable @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-    View view = View.inflate(getActivity(), R.layout.test_fragment, null);
+    View view = View.inflate(getActivity(), R.layout.test_fragment2, null);
     return view;
   }
 }

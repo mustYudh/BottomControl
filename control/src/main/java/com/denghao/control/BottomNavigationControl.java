@@ -69,10 +69,6 @@ public class BottomNavigationControl extends LinearLayout implements TabViewCont
     for (int i = 0; i < getTabCount(); i++) {
       View tab = tabControlView.getChildAt(i);
       if (tab != null) {
-        View view = getOtherView(tab);
-        if (view != null) {
-          view.setVisibility(currentPosition == i ? View.VISIBLE : View.GONE);
-        }
         tab.setSelected(currentPosition == i);
         tab.setEnabled(currentPosition != i);
       }
